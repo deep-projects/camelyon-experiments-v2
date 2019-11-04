@@ -1,0 +1,57 @@
+cli:
+  baseCommand: [camelyon-utils, merge-hdf5]
+  class: CommandLineTool
+  cwlVersion: v1.0
+  doc: Create merged.hdf5 file with random selection of tiles from individual HDF5
+    files as created by the slide-tiles subcommand.
+  inputs:
+    indir:
+      doc: Directory PATH containing all HDF5 files with tiles as created by the slide-tiles
+        subcommand.
+      inputBinding: {position: --indir}
+      type: Directory?
+    numtiles:
+      doc: number of tiles per slide for single mode
+      inputBinding: {prefix: --numtiles}
+      type: int?
+    outdir:
+      doc: Directory PATH to store merged.hdf5 file inside.
+      inputBinding: {prefix: --outdir}
+      type: Directory?
+  outputs:
+    tiles:
+      doc: Merged HDF5 file containing random tiles as numpy arrays.
+      outputBinding: {glob: merged.hdf5}
+      type: File
+container:
+  engine: docker
+  settings:
+    image: {url: 'docker.io/deepprojects/camelyon-utils:0.5'}
+    ram: 8192
+execution:
+  engine: ccagency
+  settings:
+    access:
+      auth: {password: '{{agency_password}}', username: '{{agency_username}}'}
+      url: https://agency.f4.htw-berlin.de/cc
+    retryIfFailed: true
+inputs:
+  indir:
+    class: Directory
+    connector:
+      access:
+        auth: {password: '{{ssh_password}}', username: '{{ssh_username}}'}
+        filePath: camelyon-experiments-v2/tiles
+        host: avocado01.f4.htw-berlin.de
+      command: red-connector-ssh
+  numtiles: 750
+  outdir:
+    class: Directory
+    connector:
+      access:
+        auth: {password: '{{ssh_password}}', username: '{{ssh_username}}'}
+        filePath: camelyon-experiments-v2/tiles
+        host: avocado01.f4.htw-berlin.de
+      command: red-connector-ssh
+outputs: {}
+redVersion: '8'

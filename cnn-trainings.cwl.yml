@@ -1,0 +1,111 @@
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand:
+  - camelyon-cnns
+doc: "CAMELYON CNNs trains Convolutional Neural Networks on the CAMELYON image database."
+
+inputs:
+  hdf5:
+    type: Directory
+    inputBinding:
+      position: 0
+    doc: "File path to hdf5 file. Can also be a directory path, if the directory contains a file called merged.hdf5."
+  arch:
+    type: string?
+    inputBinding:
+      prefix: --arch
+    doc: "Architecture to use. 0=VGG16 (not working yet), 1=InceptionV3, 2=InceptionResNetV2."
+  batch_size_neg:
+    type: string?
+    inputBinding:
+      prefix: --batch-size-neg
+    doc: "Batch size for negative examples."
+  batch_size_pos:
+    type: string?
+    inputBinding:
+      prefix: --batch-size-pos
+    doc: 'Batch size for positive examples.'
+  batches_train:
+    type: string?
+    inputBinding:
+      prefix: --batches-train
+    doc: "Batches per train epoch."
+  batches_val:
+    type: string?
+    inputBinding:
+      prefix: --batches-val
+    doc: "Batches per validation epoch."
+  epochs:
+    type: string?
+    inputBinding:
+      prefix: --epochs
+    doc: "Epochs to train."
+  queue_size:
+    type: string?
+    inputBinding:
+      prefix: --queue-size
+    doc: "Number of batches to preload while training."
+  l_rate:
+    type: string?
+    inputBinding:
+      prefix: --l-rate
+    doc: "Number of batches to preload while training."
+  mask_threshold:
+    type: string?
+    inputBinding:
+      prefix: --mask-threshold
+    doc: "Threshold of tissue in a cropped 224x224 tile to be valid. Or threshold of tumor tissue in a 224x224 slide to be valid."
+  color_norm:
+    type: string?
+    inputBinding:
+      prefix: --color-norm
+    doc: "Colornormalization yes/no (1/0)."
+  workers:
+    type: string?
+    inputBinding:
+      prefix: --workers
+    doc: "Number of parallel batch--generator workers. Setting this option enables multiprocessing."
+  fast_hdf5:
+    type: string?
+    inputBinding:
+      prefix: --fast-hdf5
+    doc: "Switch HDF5 Format to IO optimized version yes/no (1/0)."
+
+outputs:
+  log:
+    type: File
+    outputBinding:
+      glob: log.json
+    doc: "Log file containing performance measurements."
+  acc_plot:
+    type: File
+    outputBinding:
+      glob: acc.png
+    doc: "Validation and training accuracy per epoch."
+  loss_plot:
+    type: File
+    outputBinding:
+      glob: loss.png
+    doc: "Validation and training loss per epoch."
+  roc_plot:
+    type: File
+    outputBinding:
+      glob: roc.png
+    doc: "ROC."
+  model_final:
+    type: File
+    outputBinding:
+      glob: model_final.hdf5
+    doc: "Final Model."
+  checkpoint:
+    type: File
+    outputBinding:
+      glob: checkpoint
+  model_checkpoint_data:
+    type: File
+    outputBinding:
+      glob: model_checkpoint.ckpt.data*
+  model_checkpoint_index:
+    type: File
+    outputBinding:
+      glob: model_checkpoint.ckpt.index

@@ -1,0 +1,30 @@
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand:
+  - camelyon-utils
+  - merge-hdf5
+doc: "Create merged.hdf5 file with random selection of tiles from individual HDF5 files as created by the slide-tiles subcommand."
+
+inputs:
+  indir:
+    type: Directory?
+    inputBinding:
+      position: --indir
+    doc: "Directory PATH containing all HDF5 files with tiles as created by the slide-tiles subcommand."
+  outdir:
+    type: Directory?
+    inputBinding:
+      prefix: --outdir
+    doc: "Directory PATH to store merged.hdf5 file inside."
+  numtiles:
+    type: int?
+    inputBinding:
+      prefix: --numtiles
+    doc: "number of tiles per slide for single mode"
+
+outputs:
+  tiles:
+    type: File
+    outputBinding:
+      glob: merged.hdf5
+    doc: "Merged HDF5 file containing random tiles as numpy arrays."
