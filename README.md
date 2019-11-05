@@ -28,20 +28,21 @@ These experiments have been built from the following resources.
 
 ## Reproduce
 
-The full experiments, that require a lot of resources, is located in the `cbmi` directory.
-A smaller version of the experiment can generated using the following commands:
+The full experiments, that require a lot of resources, are located in the `cbmi` directory.
+A smaller version of the experiment can generated using the following commands.
+A smaller number of data samples and training epochs will result in a lower CNN model quality.
 
 ```bash
 pip3 install --user -r requirements
 ./generate-red.py avocado01.f4.htw-berlin.de --cc-agency-url https://agency.f4.htw-berlin.de/cc --output-dir custom --tumor-slides-end-index 4 --normal-slides-end-index 4 --num-tiles 256 --gpus 1 --epochs 1
 ```
 
-You should provide a different SSH server host name and `--cc-agency-url`.
+You should provide a different SSH server host name.
 CC-Agency is one of two available RED Execution Engines.
-If you do not want to setup your own instance of CC-Agency, you can remove this parameter entirely.
+If you do not want to setup your own instance of CC-Agency, you can remove the `--cc-agency-url` parameter entirely.
 The RED Execution Engine will then be set to `ccfaice` to run experiments on your local Linux host.
 This requires Docker to be installed.
-For the usage of GPUs you also need nvidia-container-toolkit or nvidia-docker to be intalled as well.
+For the usage of GPUs you also need *nvidia-container-toolkit* or *nvidia-docker* to be intalled as well.
 You can remove the `--gpus` parameter to fall back to CPU processing.
 Please note that the CPU version requires more RAM (40 GB).
 
@@ -70,7 +71,7 @@ faice exec custom/cnn-training-batchConcurrencyLimit-9.red.yml
 ```
 
 Each of the three `cnn-training-batchConcurrencyLimit-*.red.yml` contains 9 identical CNN training configurations.
-The CNN trainings can be performed with CC-Agency using different batchConcurrencyLimits, such that the 1, 3 or 9 of the 9 runs are executed in parallel.
+The CNN trainings can be performed with CC-Agency using a certain `batchConcurrencyLimit`, such that 1, 3 or 9 of the 9 runs are executed in parallel.
 Depending on the SSH server, that provides the merged tiles via SSHFS into the experiment containers, you might experience a performance impact resulting in different training times.
 These training times can be inspected in the log files generated on the SSH server by the experiments.
 
