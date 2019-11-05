@@ -1,0 +1,827 @@
+batches:
+- inputs:
+    arch: '1'
+    epochs: '8'
+    fast_hdf5: '1'
+    hdf5:
+      class: Directory
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          dirPath: camelyon-experiments-v2/merged
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+        mount: true
+    mask_threshold: '0.1'
+    queue_size: '1'
+  outputs:
+    acc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_1/acc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    checkpoint:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_1/checkpoint
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    log:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_1/log.json
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    loss_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_1/loss.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_data:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_1/model_checkpoint.ckpt.data
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_index:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_1/model_checkpoint.ckpt.index
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_final:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_1/model_final.hdf5
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    roc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_1/roc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+- inputs:
+    arch: '1'
+    epochs: '8'
+    fast_hdf5: '1'
+    hdf5:
+      class: Directory
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          dirPath: camelyon-experiments-v2/merged
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+        mount: true
+    mask_threshold: '0.1'
+    queue_size: '1'
+  outputs:
+    acc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_2/acc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    checkpoint:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_2/checkpoint
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    log:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_2/log.json
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    loss_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_2/loss.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_data:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_2/model_checkpoint.ckpt.data
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_index:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_2/model_checkpoint.ckpt.index
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_final:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_2/model_final.hdf5
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    roc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_2/roc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+- inputs:
+    arch: '1'
+    epochs: '8'
+    fast_hdf5: '1'
+    hdf5:
+      class: Directory
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          dirPath: camelyon-experiments-v2/merged
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+        mount: true
+    mask_threshold: '0.1'
+    queue_size: '1'
+  outputs:
+    acc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_3/acc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    checkpoint:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_3/checkpoint
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    log:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_3/log.json
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    loss_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_3/loss.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_data:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_3/model_checkpoint.ckpt.data
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_index:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_3/model_checkpoint.ckpt.index
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_final:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_3/model_final.hdf5
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    roc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_3/roc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+- inputs:
+    arch: '1'
+    epochs: '8'
+    fast_hdf5: '1'
+    hdf5:
+      class: Directory
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          dirPath: camelyon-experiments-v2/merged
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+        mount: true
+    mask_threshold: '0.1'
+    queue_size: '1'
+  outputs:
+    acc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_4/acc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    checkpoint:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_4/checkpoint
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    log:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_4/log.json
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    loss_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_4/loss.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_data:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_4/model_checkpoint.ckpt.data
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_index:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_4/model_checkpoint.ckpt.index
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_final:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_4/model_final.hdf5
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    roc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_4/roc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+- inputs:
+    arch: '1'
+    epochs: '8'
+    fast_hdf5: '1'
+    hdf5:
+      class: Directory
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          dirPath: camelyon-experiments-v2/merged
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+        mount: true
+    mask_threshold: '0.1'
+    queue_size: '1'
+  outputs:
+    acc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_5/acc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    checkpoint:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_5/checkpoint
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    log:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_5/log.json
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    loss_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_5/loss.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_data:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_5/model_checkpoint.ckpt.data
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_index:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_5/model_checkpoint.ckpt.index
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_final:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_5/model_final.hdf5
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    roc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_5/roc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+- inputs:
+    arch: '1'
+    epochs: '8'
+    fast_hdf5: '1'
+    hdf5:
+      class: Directory
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          dirPath: camelyon-experiments-v2/merged
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+        mount: true
+    mask_threshold: '0.1'
+    queue_size: '1'
+  outputs:
+    acc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_6/acc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    checkpoint:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_6/checkpoint
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    log:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_6/log.json
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    loss_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_6/loss.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_data:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_6/model_checkpoint.ckpt.data
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_index:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_6/model_checkpoint.ckpt.index
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_final:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_6/model_final.hdf5
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    roc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_6/roc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+- inputs:
+    arch: '1'
+    epochs: '8'
+    fast_hdf5: '1'
+    hdf5:
+      class: Directory
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          dirPath: camelyon-experiments-v2/merged
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+        mount: true
+    mask_threshold: '0.1'
+    queue_size: '1'
+  outputs:
+    acc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_7/acc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    checkpoint:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_7/checkpoint
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    log:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_7/log.json
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    loss_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_7/loss.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_data:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_7/model_checkpoint.ckpt.data
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_index:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_7/model_checkpoint.ckpt.index
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_final:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_7/model_final.hdf5
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    roc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_7/roc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+- inputs:
+    arch: '1'
+    epochs: '8'
+    fast_hdf5: '1'
+    hdf5:
+      class: Directory
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          dirPath: camelyon-experiments-v2/merged
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+        mount: true
+    mask_threshold: '0.1'
+    queue_size: '1'
+  outputs:
+    acc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_8/acc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    checkpoint:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_8/checkpoint
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    log:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_8/log.json
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    loss_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_8/loss.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_data:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_8/model_checkpoint.ckpt.data
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_index:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_8/model_checkpoint.ckpt.index
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_final:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_8/model_final.hdf5
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    roc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_8/roc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+- inputs:
+    arch: '1'
+    epochs: '8'
+    fast_hdf5: '1'
+    hdf5:
+      class: Directory
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          dirPath: camelyon-experiments-v2/merged
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+        mount: true
+    mask_threshold: '0.1'
+    queue_size: '1'
+  outputs:
+    acc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_9/acc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    checkpoint:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_9/checkpoint
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    log:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_9/log.json
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    loss_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_9/loss.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_data:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_9/model_checkpoint.ckpt.data
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_checkpoint_index:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_9/model_checkpoint.ckpt.index
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    model_final:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_9/model_final.hdf5
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+    roc_plot:
+      class: File
+      connector:
+        access:
+          auth: {password: '{{cbmi_password}}', username: '{{cbmi_username}}'}
+          filePath: camelyon-experiments-v2/training/lim_3/run_9/roc.png
+          host: avocado01.f4.htw-berlin.de
+        command: red-connector-ssh
+cli:
+  baseCommand: [camelyon-cnns]
+  class: CommandLineTool
+  cwlVersion: v1.0
+  doc: CAMELYON CNNs trains Convolutional Neural Networks on the CAMELYON image database.
+  inputs:
+    arch:
+      doc: Architecture to use. 0=VGG16 (not working yet), 1=InceptionV3, 2=InceptionResNetV2.
+      inputBinding: {prefix: --arch}
+      type: string?
+    batch_size_neg:
+      doc: Batch size for negative examples.
+      inputBinding: {prefix: --batch-size-neg}
+      type: string?
+    batch_size_pos:
+      doc: Batch size for positive examples.
+      inputBinding: {prefix: --batch-size-pos}
+      type: string?
+    batches_train:
+      doc: Batches per train epoch.
+      inputBinding: {prefix: --batches-train}
+      type: string?
+    batches_val:
+      doc: Batches per validation epoch.
+      inputBinding: {prefix: --batches-val}
+      type: string?
+    color_norm:
+      doc: Colornormalization yes/no (1/0).
+      inputBinding: {prefix: --color-norm}
+      type: string?
+    epochs:
+      doc: Epochs to train.
+      inputBinding: {prefix: --epochs}
+      type: string?
+    fast_hdf5:
+      doc: Switch HDF5 Format to IO optimized version yes/no (1/0).
+      inputBinding: {prefix: --fast-hdf5}
+      type: string?
+    hdf5:
+      doc: File path to hdf5 file. Can also be a directory path, if the directory
+        contains a file called merged.hdf5.
+      inputBinding: {position: 0}
+      type: Directory
+    l_rate:
+      doc: Number of batches to preload while training.
+      inputBinding: {prefix: --l-rate}
+      type: string?
+    mask_threshold:
+      doc: Threshold of tissue in a cropped 224x224 tile to be valid. Or threshold
+        of tumor tissue in a 224x224 slide to be valid.
+      inputBinding: {prefix: --mask-threshold}
+      type: string?
+    queue_size:
+      doc: Number of batches to preload while training.
+      inputBinding: {prefix: --queue-size}
+      type: string?
+    workers:
+      doc: Number of parallel batch--generator workers. Setting this option enables
+        multiprocessing.
+      inputBinding: {prefix: --workers}
+      type: string?
+  outputs:
+    acc_plot:
+      doc: Validation and training accuracy per epoch.
+      outputBinding: {glob: acc.png}
+      type: File
+    checkpoint:
+      outputBinding: {glob: checkpoint}
+      type: File
+    log:
+      doc: Log file containing performance measurements.
+      outputBinding: {glob: log.json}
+      type: File
+    loss_plot:
+      doc: Validation and training loss per epoch.
+      outputBinding: {glob: loss.png}
+      type: File
+    model_checkpoint_data:
+      outputBinding: {glob: model_checkpoint.ckpt.data*}
+      type: File
+    model_checkpoint_index:
+      outputBinding: {glob: model_checkpoint.ckpt.index}
+      type: File
+    model_final:
+      doc: Final Model.
+      outputBinding: {glob: model_final.hdf5}
+      type: File
+    roc_plot:
+      doc: ROC.
+      outputBinding: {glob: roc.png}
+      type: File
+container:
+  engine: docker
+  settings:
+    gpus: {count: 1, vendor: nvidia}
+    image: {url: 'docker.io/deepprojects/camelyon-cnns:0.2-gpu'}
+    ram: 32768
+execution:
+  engine: ccagency
+  settings:
+    access:
+      auth: {password: '{{agency_password}}', username: '{{agency_username}}'}
+      url: https://agency.f4.htw-berlin.de/cc
+    batchConcurrencyLimit: 3
+    retryIfFailed: true
+redVersion: '8'

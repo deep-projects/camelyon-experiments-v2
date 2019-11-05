@@ -9,7 +9,7 @@ inputs:
   indir:
     type: Directory?
     inputBinding:
-      position: --indir
+      prefix: --indir
     doc: "Directory PATH containing all HDF5 files with tiles as created by the slide-tiles subcommand."
   outdir:
     type: Directory?
@@ -22,9 +22,4 @@ inputs:
       prefix: --numtiles
     doc: "number of tiles per slide for single mode"
 
-outputs:
-  tiles:
-    type: File
-    outputBinding:
-      glob: merged.hdf5
-    doc: "Merged HDF5 file containing random tiles as numpy arrays."
+outputs: {}
