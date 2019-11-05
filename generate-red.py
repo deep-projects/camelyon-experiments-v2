@@ -287,7 +287,7 @@ container = {
     'engine': 'docker',
     'settings': {
         'image': {'url': CAMELYON_CNN_IMAGE},
-        'ram': 32768
+        'ram': 40000
     }
 }
 
