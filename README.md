@@ -43,6 +43,7 @@ The RED Execution Engine will then be set to `ccfaice` to run experiments on you
 This requires Docker to be installed.
 For the usage of GPUs you also need nvidia-container-toolkit or nvidia-docker to be intalled as well.
 You can remove the `--gpus` parameter to fall back to CPU processing.
+Please note that the CPU version requires more RAM (40 GB).
 
 For more information about the parameters run `./generate-red.py --help`. For more information about Curious Containers we recommend reading the [RED Beginner's Guide](https://www.curious-containers.cc/docs/red-beginners-guide).
 
