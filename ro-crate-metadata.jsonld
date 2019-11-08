@@ -1,0 +1,193 @@
+{
+	"@context": "https://w3id.org/ro/crate/0.2-DRAFT/context",
+	"@graph": [
+		{
+			"@id": "ro-crate-metadata.jsonld",
+			"@type": "CreativeWork",
+			"identifier": "ro-crate-metadata.jsonld",
+			"about": {"@id": "./"}
+		},
+		{
+			"@id": "./",
+			"@type": "Dataset",
+			"name": "camelyon-experiments-v2",
+			"author": "#cjansen",
+			"contactPoint": "#contact",
+			"description": "A collection of RED files which describe RED experiments. The experiments described prepare data of the CAMELYON16 database and train a cnn on it afterwards.",
+			"url": "https://github.com/deep-projects/camelyon-experiments-v2",
+			"hasPart": [
+				{ "@id": "slide-to-tiles.cwl.yml" },
+				{ "@id": "merge-tiles.cwl.yml" },
+				{ "@id": "cnn-training.cwl.yml" },
+				{ "@id": "generate-red.py" },
+				{ "@id": "cbmi/slide-to-tiles.red.yml" },
+				{ "@id": "cbmi/merge-tiles.red.yml" },
+				{ "@id": "cbmi/cnn-training-batchConcurrencyLimit-1.red.yml" },
+				{ "@id": "cbmi/cnn-training-batchConcurrencyLimit-3.red.yml" },
+				{ "@id": "cbmi/cnn-training-batchConcurrencyLimit-9.red.yml" }
+			]
+		},
+		{
+			"@id": "#cjansen",
+			"@type": "Person",
+			"name": "Christoph Jansen",
+			"email": "Christoph.Jansen@htw-berlin.de"
+		},
+		{
+			"@id": "#contact",
+			"@type": "ContactPoint",
+			"email": "Christoph.Jansen@htw-berlin.de"
+		},
+
+
+		{
+			"@id": "slide-to-tiles.cwl.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "slide to tiles CWL Workflow",
+			"programmingLanguage": { "@id": "https://w3id.org/cwl/v1.0/" },
+			"description": "CWL Workflow description to describe the process of sliding tiles out of the CAMELYON16 dataset.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#cwltool" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/camelyon-experiments-v2" }
+		},
+		{
+			"@id": "merge-tiles.cwl.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "merge tiles CWL Workflow",
+			"programmingLanguage": { "@id": "https://w3id.org/cwl/v1.0/" },
+			"description": "CWL Workflow description to describe the process of merging tiles of the CAMELYON16 dataset into a hdf5 file.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#cwltool" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/camelyon-experiments-v2" }
+		},
+		{
+			"@id": "cnn-training.cwl.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "cnn training CWL Workflow",
+			"programmingLanguage": { "@id": "https://w3id.org/cwl/v1.0/" },
+			"description": "CWL Workflow description to describe the process of training a Convolutional Neural Network on tiles of the CAMELYON16 dataset.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#cwltool" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/camelyon-experiments-v2" }
+		},
+		{
+			"@id": "generate-red.py",
+			"@type": "SoftwareSourceCode",
+			"name": "gererate red Python Script",
+			"programmingLanguage": "python",
+			"description": "A python script to generate red files, which describe the training process of the cnn.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#python" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/camelyon-experiments-v2" }
+		},
+		{
+			"@id": "cbmi/slide-to-tiles.red.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "slide to tiles RED Workflow",
+			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
+			"description": "RED Workflow description to describe the process of sliding tiles out of the CAMELYON16 dataset.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#ccfaice" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/camelyon-experiments-v2" }
+		},
+		{
+			"@id": "cbmi/merge-tiles.red.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "merge tiles RED Workflow",
+			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
+			"description": "RED Workflow description to describe the process of merging tiles of the CAMELYON16 dataset into a hdf5 file.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#ccfaice" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/camelyon-experiments-v2" }
+		},
+		{
+			"@id": "cbmi/cnn-training-batchConcurrencyLimit-1.red.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "cnn training batch concurrency limit 1 RED Workflow",
+			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
+			"description": "RED Workflow description to describe the process of training a Convolutional Neural Network on tiles of the CAMELYON16 dataset.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#ccfaice" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/camelyon-experiments-v2" }
+		},
+		{
+			"@id": "cbmi/cnn-training-batchConcurrencyLimit-3.red.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "cnn training batch concurrency limit 3 RED Workflow",
+			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
+			"description": "RED Workflow description to describe the process of training a Convolutional Neural Network on tiles of the CAMELYON16 dataset.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#ccfaice" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/camelyon-experiments-v2" }
+		},
+		{
+			"@id": "cbmi/cnn-training-batchConcurrencyLimit-9.red.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "cnn training batch concurrency limit 9 RED Workflow",
+			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
+			"description": "RED Workflow description to describe the process of training a Convolutional Neural Network on tiles of the CAMELYON16 dataset.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#ccfaice" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/camelyon-experiments-v2" }
+		},
+    {
+			"@id": "#cwltool",
+			"@type": "SoftwareApplication",
+			"name": "cwltool",
+			"description": "Common Workflow Language reference implementation",
+			"url": { "@id": "https://github.com/common-workflow-language/cwltool/" },
+			"version": "1.0.20190618201008",
+			"cite-as": { "@id": "https://doi.org/10.5281/zenodo.3250191" }
+		},
+    {
+			"@id": "#ccfaice",
+			"@type": "SoftwareApplication",
+			"name": "faice",
+			"description": "RED format local execution engine",
+			"url": { "@id": "https://github.com/curious-containers/curious-containers/tree/master/cc-faice" },
+			"version": "8.1"
+		},
+    {
+			"@id": "#python",
+			"@type": "SoftwareApplication",
+			"name": "python",
+			"description": "The python programming language interpreter",
+			"version": "3.5"
+		}
+	]
+}
