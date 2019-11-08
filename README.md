@@ -27,7 +27,20 @@ These experiments have been built from the following resources.
 
 ## Requirements
 
-Install Python >= 3.5.
+Install Python >= 3.5, pip and venv.
+
+On Ubuntu:
+
+```bash
+apt update
+apt install -y python3-pip python3-venv
+```
+
+On Fedora:
+
+```bash
+dnf install python3-pip python3-venv
+```
 
 
 ## Reproduce
