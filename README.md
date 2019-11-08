@@ -10,7 +10,7 @@ The experiments can be processed using RED Execution Engines from the [Curious C
 * merge-tiles loads a certain number of random tiles from the previously generated HDF5 files and stores them in one large array in a single HDF5 file.
 * cnn-training loads select random batch slices from the merged tiles to train a CNN for tumor classification.
 
-In the original experiment, the complete CAMELYON16 training data set is downloaded and the merge step produces a very large (1.8 TB) tiles file.
+In the original experiment, the complete CAMELYON16 training data set is downloaded and the merge step produces a very large tiles file.
 Additionally, the original experiment is executed in the cluster infrastructure of [CBMI - HTW Berlin](https://cbmi.htw-berlin.de/).
 This improved version of the experiment can be easily adapted to use less resources and does not require access to CBMI resources, as long as the user can provide an SSH server with appriate storage space for intermediate and final results.
 The `generate-red.py` script provides convenient parameters to generate custom RED files.
@@ -33,7 +33,7 @@ A smaller version of the experiment can generated using the following commands.
 A smaller number of data samples and training epochs will result in a lower CNN model quality.
 
 ```bash
-pip3 install --user -r requirements
+pip3 install --user -r requirements.txt
 ./generate-red.py avocado01.f4.htw-berlin.de --cc-agency-url https://agency.f4.htw-berlin.de/cc --output-dir custom --tumor-slides-end-index 4 --normal-slides-end-index 4 --num-tiles 256 --gpus 1 --epochs 1
 ```
 
