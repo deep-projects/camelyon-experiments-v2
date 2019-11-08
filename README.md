@@ -25,6 +25,10 @@ These experiments have been built from the following resources.
 * Docker image: [docker.io/deepprojects/camelyon-cnns:0.2](https://cloud.docker.com/u/deepprojects/repository/docker/deepprojects/camelyon-cnns) ([Dockerfile](https://github.com/deep-projects/appliances/tree/master/camelyon-cnns/0.2))
 * Docker image with CUDA GPU support: [docker.io/deepprojects/camelyon-cnns:0.2-gpu](https://cloud.docker.com/u/deepprojects/repository/docker/deepprojects/camelyon-cnns) ([Dockerfile](https://github.com/deep-projects/appliances/tree/master/camelyon-cnns/0.2-gpu))
 
+## Requirements
+
+Install Python >= 3.5.
+
 
 ## Reproduce
 
