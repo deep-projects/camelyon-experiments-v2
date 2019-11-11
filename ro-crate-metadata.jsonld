@@ -98,10 +98,9 @@
 		{
 			"@id": "cbmi/slide-to-tiles.red.yml",
 			"@type": "SoftwareSourceCode",
-			"additionalType": { "@id": "wfdesc:Workflow" },
-			"name": "slide to tiles RED Workflow",
+			"name": "slide to tiles Reproducable Experiment Description",
 			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
-			"description": "RED Workflow description to describe the process of sliding tiles out of the CAMELYON16 dataset.",
+			"description": "Reproducable Experiment Description to describe the process of sliding tiles out of the CAMELYON16 dataset.",
 			"creator": { "@id": "#cjansen" },
 			"potentialAction": {
 				"@type": "ActivateAction",
@@ -112,10 +111,9 @@
 		{
 			"@id": "cbmi/merge-tiles.red.yml",
 			"@type": "SoftwareSourceCode",
-			"additionalType": { "@id": "wfdesc:Workflow" },
 			"name": "merge tiles RED Workflow",
 			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
-			"description": "RED Workflow description to describe the process of merging tiles of the CAMELYON16 dataset into a hdf5 file.",
+			"description": "Reproducable Experiment Description to describe the process of merging tiles of the CAMELYON16 dataset into a hdf5 file.",
 			"creator": { "@id": "#cjansen" },
 			"potentialAction": {
 				"@type": "ActivateAction",
@@ -126,10 +124,9 @@
 		{
 			"@id": "cbmi/cnn-training-batchConcurrencyLimit-1.red.yml",
 			"@type": "SoftwareSourceCode",
-			"additionalType": { "@id": "wfdesc:Workflow" },
 			"name": "cnn training batch concurrency limit 1 RED Workflow",
 			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
-			"description": "RED Workflow description to describe the process of training a Convolutional Neural Network on tiles of the CAMELYON16 dataset.",
+			"description": "Reproducable Experiment Description to describe the process of training a Convolutional Neural Network on tiles of the CAMELYON16 dataset.",
 			"creator": { "@id": "#cjansen" },
 			"potentialAction": {
 				"@type": "ActivateAction",
@@ -140,10 +137,9 @@
 		{
 			"@id": "cbmi/cnn-training-batchConcurrencyLimit-3.red.yml",
 			"@type": "SoftwareSourceCode",
-			"additionalType": { "@id": "wfdesc:Workflow" },
 			"name": "cnn training batch concurrency limit 3 RED Workflow",
 			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
-			"description": "RED Workflow description to describe the process of training a Convolutional Neural Network on tiles of the CAMELYON16 dataset.",
+			"description": "Reproducable Experiment Description to describe the process of training a Convolutional Neural Network on tiles of the CAMELYON16 dataset.",
 			"creator": { "@id": "#cjansen" },
 			"potentialAction": {
 				"@type": "ActivateAction",
@@ -154,10 +150,9 @@
 		{
 			"@id": "cbmi/cnn-training-batchConcurrencyLimit-9.red.yml",
 			"@type": "SoftwareSourceCode",
-			"additionalType": { "@id": "wfdesc:Workflow" },
 			"name": "cnn training batch concurrency limit 9 RED Workflow",
 			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
-			"description": "RED Workflow description to describe the process of training a Convolutional Neural Network on tiles of the CAMELYON16 dataset.",
+			"description": "Reproducable Experiment Description to describe the process of training a Convolutional Neural Network on tiles of the CAMELYON16 dataset.",
 			"creator": { "@id": "#cjansen" },
 			"potentialAction": {
 				"@type": "ActivateAction",
